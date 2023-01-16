@@ -1,0 +1,29 @@
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(203, 225, 234);
+}
+
+.form{
+    background-image: url('https://t3.ftcdn.net/jpg/05/25/33/20/240_F_525332019_92hYjYOvh0bQN9U0t0C84BF0dAhjZXVN.jpg');
+ }
+ 
+.editSupplier{
+    color: #11393b; 
+    text-align: center; 
+    background-color: rgb(201, 229, 237);
+}
+
+.update-Btn{
+    width: 130px;
+    background-color: #11393b;
+    color: aliceblue; 
+}

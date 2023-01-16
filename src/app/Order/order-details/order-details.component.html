@@ -1,0 +1,185 @@
+<mat-card class="matcard">
+  <div class="CardContainer">
+    <ng-content></ng-content>
+    <h1 class="heading">
+      <b>Purchase Order</b>
+    </h1>
+
+    <mat-divider></mat-divider>
+    <br>
+    <span class="heading2">Add Order</span>
+    <br>
+    <mat-divider></mat-divider>
+
+    <form [formGroup]="orderDetailsform" (ngSubmit)="orderFunc()" novalidate>
+
+      <div class="card">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Supplier Name</mat-label>
+          <mat-select formControlName="supplier">
+            <mat-option *ngFor="let supplier of suppliers" [value]="supplier.name">
+              {{supplier.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="card">
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Product Name</mat-label>
+          <mat-select (selectionChange)="productOnChanged($event.value)" formControlName="productName">
+            <mat-option *ngFor="let item of productData" [value]="item.pName">
+              {{item.pName}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <br>
+      <div class="card">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Quantity Ordered</mat-label>
+          <input matInput="" placeholder="enter No. Of Products" (keyup)="getTotalOrderAmount($event)"
+            formControlName="oNoOfProducts" class="form-input-field" id="oNoOfProducts">
+          <mat-error *ngIf="errorFunc('oNoOfProducts', 'required')">Quantity is required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="card">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Order Amount</mat-label>
+          <input matInput="" placeholder="Amount" formControlName="oAmount" class="form-input-field" id="oAmount">
+          <mat-error *ngIf="errorFunc('oAmount', 'required')">Amount is required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <br>
+      <div class="card" style="margin-left:120px ;">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Order Date</mat-label>
+          <input matInput [matDatepicker]="picker" color="accent" formControlName="oDate" id="oDate">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker textprimary></mat-datepicker>
+          <mat-error *ngIf="errorFunc('oDate', 'required')">oreder Date is required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <br>
+      <div class="card">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Payment Status</mat-label>
+
+          <select matNativeControl formControlName="oPayment" id="oPayment">
+            <option value="Done">Done</option>
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+          </select>
+          <mat-error *ngIf="errorFunc('oPayment', 'required')">Please select the Payment</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="card">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Payment Type</mat-label>
+
+          <select matNativeControl formControlName="oPaymentType" id="oPaymentType">
+            <option value="CashOnDeleviery">Cash On Delivery</option>
+            <option value="UPI PaymentMethods">UPI </option>
+            <option value="Card-Based Payment">Card-Based Payment</option>
+          </select>
+          <mat-error *ngIf="errorFunc('oPaymentType', 'required')">Please select the Role </mat-error>
+        </mat-form-field>
+      </div>
+
+      <br>
+      <div class="card">
+        <div class="">
+          <mat-card-content>
+            <button mat-stroked-button class="_Btn" type="submit" value="submit" center>Proceed</button>
+          </mat-card-content>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</mat-card>
+
+<div class="example-container mat-elevation-z2" *ngIf="orders.length>0" style="margin-left:10px; margin-right:10px">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+
+    <ng-container matColumnDef="pId">
+      <th mat-header-cell *matHeaderCellDef> Product Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.pId}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="productName">
+      <th mat-header-cell *matHeaderCellDef> ProductName </th>
+      <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="supplier">
+      <th mat-header-cell *matHeaderCellDef> Supplier Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="oNoOfProducts">
+      <th mat-header-cell *matHeaderCellDef> No of Product </th>
+      <td mat-cell *matCellDef="let element"> {{element.oNoOfProducts}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="oAmount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.oAmount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="oDate">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.oDate | date}} </td>
+    </ng-container>
+    <ng-container matColumnDef="oPayment">
+      <th mat-header-cell *matHeaderCellDef> Payment </th>
+      <td mat-cell *matCellDef="let element"> {{element.oPayment}} </td>
+    </ng-container>
+    <ng-container matColumnDef="oPaymentType">
+      <th mat-header-cell *matHeaderCellDef> PaymentType </th>
+      <td mat-cell *matCellDef="let element"> {{element.oPaymentType}} </td>
+    </ng-container>
+    <ng-container matColumnDef="oStatus">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.oStatus}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button matTooltip="Remove Order" (click)="removeOrder(element.pId)" class="iconbutton" color="warn">
+          Remove
+        </button>
+
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons></mat-paginator>
+
+</div>
+<div style="margin-left:10px;margin-top:10px;display: flex;" *ngIf="orders.length>0">
+
+  <div style="text-align:left">
+
+    <button mat-raised-button matTooltip="Save Orders" class="_Btn" (click)="saveOrderDetails()" class="iconbutton" routerLink="/orderDetails">
+      Save Orders
+    </button>
+
+  </div>
+
+  <div style="text-align:right;margin-left: 800px;padding-top: 10px;">
+
+    <h4><b>Total Amount:</b>{{totalAmount}}</h4>
+
+  </div>
+</div>

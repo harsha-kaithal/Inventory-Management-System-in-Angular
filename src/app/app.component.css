@@ -1,0 +1,39 @@
+.side-nav {
+    background-color: #22595c;
+    width: 190px;
+    margin-left: 10px;
+    border-radius: 30px;
+    position: fixed;
+
+}
+
+.toolbar {
+    background-color: #22595c;
+    height: 70px;
+    /* position: fixed;
+    top: 0; 
+    z-index: 1000; 
+     */
+}
+
+.menu {
+    margin-left: 15px;
+    background-color: rgb(174, 216, 216);
+    color: #11393b;
+    border-radius: 30px;
+    width: 160px;
+}
+
+.content {
+    padding: 32px;
+}
+
+.Menu{ 
+    background-color: #11393b;
+}
+
+.logout-btn {
+    margin-left: 1050px;
+    background-color: #11393b;
+    color: #d6edee;
+}

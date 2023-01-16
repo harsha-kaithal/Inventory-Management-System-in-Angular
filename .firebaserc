@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "inventory-management-sys-a0f23": {
+      "hosting": {
+        "inventorymanagement": [
+          "inventory-management-sys-a0f23"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "inventory-management-sys-a0f23"
+  }
+}

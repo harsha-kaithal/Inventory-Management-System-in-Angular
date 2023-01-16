@@ -1,0 +1,68 @@
+.form-container
+{
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  background: rgb(233, 239, 239);
+  padding: 48px;
+  border-radius: 16px;
+  margin-left: 850px;
+
+  /* @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+  
+}
+
+.toolbar {
+  position: fixed;
+  height: 80px;
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.logo{
+  border-radius: 50px;
+}
+
+.form-container mat-form-field
+{
+  width: 100%;
+}
+
+.center
+{
+  display:flex;
+  justify-content: center;
+}
+
+.margin-top
+{
+  margin-top: 16px;
+}
+
+.text-center
+{
+  text-align:center;
+}
+
+
+.Login-Bt{
+  background-color: #017e84;
+  color: azure;
+
+}
+
+.bg-img{
+  margin-top: -500px;
+  width: 800px; 
+}

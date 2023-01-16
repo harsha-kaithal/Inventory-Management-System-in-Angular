@@ -1,0 +1,82 @@
+.heading{
+  text-align: center;
+  height: 60px;
+  margin-top: 20px;
+  color: #11393b;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+}
+
+.heading2{
+  margin-top: 20px;
+  margin-left: 220px;
+  color: #11393b;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.CardContainer{
+    border-radius: 15px;
+    height:65%;
+    width: 41%;
+    box-shadow: 2px 2px 10px  rgb(4, 37, 46);
+    background:   #d5e7e7;
+    /* margin-left: 670px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+
+.example-container {
+  height: 350px;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  border: 1px solid #017e87;
+  padding: 10px;
+  box-shadow: 5px 12px #11393b;
+  background: #bddbde; 
+}
+    
+
+.card{
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
+.head{
+    font-weight: bold;
+     color: rgb(4, 37, 46);
+      text-align:center;
+      margin-top: 8px;
+ }
+
+._Btn{
+  background-color: rgb(4, 37, 46);
+  color: aliceblue;
+}
+
+.Mybutton{
+    display: inline-block;
+    padding: 1.2rem 1rem;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.matcard{
+  background-image: url("https://cdn.create.vista.com/api/media/small/490580496/stock-photo-smiling-asian-woman-credit-card");
+  background-repeat: no-repeat;
+  height: 175%; 
+
+  background-color: gray;
+  background-position: center;
+  background-size: cover;
+}

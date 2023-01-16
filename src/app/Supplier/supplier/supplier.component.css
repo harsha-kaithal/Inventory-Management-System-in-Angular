@@ -1,0 +1,53 @@
+  .example-container {
+    height: 350px;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -20px;
+    border: 1px solid #017e87;
+    padding: 10px;
+    box-shadow: 5px 12px #11393b;
+    background: #bddbde; 
+  }
+      
+.table {
+    margin-top:20px;
+    width: 100%;
+  }
+
+  .header{
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #11393b;
+  }
+
+    
+.heading{
+  text-align: center;
+  height: 60px;
+  margin-top: 20px;
+  color: #11393b;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+}
+
+.addSupplier-Btn {
+  margin-top: -60px; 
+  margin-left: 1120px; 
+  width: 130px;
+  background-color: #11393b;
+  color: aliceblue;
+}
+
+.edit-Btn{
+  background-color: #11393b;
+  color: aliceblue;
+}
+
+.delete-Btn{
+  background-color: rgb(230, 40, 40);
+  color: aliceblue;
+}

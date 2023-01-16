@@ -1,0 +1,99 @@
+
+<div class="container"
+[class.mat-elevation-z2]="false"
+[class.mat-elevation-z2]="true">
+&nbsp;
+<mat-form-field class="formfield" appearance="outline">
+<mat-label>Order Status</mat-label>
+<mat-select (selectionChange)="orderStatusOnChanged($event.value)">
+ <mat-option *ngFor="let skill of orderStatus" [value]="skill.value" >
+  {{skill.viewValue}}
+ </mat-option>
+</mat-select>
+
+</mat-form-field>
+
+</div>
+<div class="example-container mat-elevation-z8" >
+<table mat-table [dataSource]="dataSource">
+
+ <!-- Position Column -->
+ <ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Order No. </th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+ </ng-container>
+ <ng-container matColumnDef="pId">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Product Id </th>
+  <td mat-cell *matCellDef="let element"> {{element.pId}} </td>
+ </ng-container>
+ <!-- Name Column -->
+ <ng-container matColumnDef="productName">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Product Name </th>
+  <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+ </ng-container>
+ <ng-container matColumnDef="supplier">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Supplier </th>
+  <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+ </ng-container>
+ <!-- Weight Column -->
+ <ng-container matColumnDef="oNoOfProducts">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> No of Product </th>
+  <td mat-cell *matCellDef="let element"> {{element.oNoOfProducts}} </td>
+ </ng-container>
+
+ <!-- Symbol Column -->
+ <ng-container matColumnDef="oAmount">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Order Amount </th>
+  <td mat-cell *matCellDef="let element"> {{element.oAmount}} </td>
+ </ng-container>
+ <ng-container matColumnDef="oDate">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Date </th>
+  <td mat-cell *matCellDef="let element"> {{element.oDate | date}} </td>
+ </ng-container>
+ <ng-container matColumnDef="oPayment">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Payment </th>
+  <td mat-cell *matCellDef="let element"> {{element.oPayment}} </td>
+ </ng-container>
+ <ng-container matColumnDef="oPaymentType">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Payment Type </th>
+  <td mat-cell *matCellDef="let element"> {{element.oPaymentType}} </td>
+ </ng-container>
+ <ng-container matColumnDef="oStatus">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Order Status </th>
+  <td mat-cell *matCellDef="let element"> {{element.oStatus}} </td>
+ </ng-container>
+ <ng-container matColumnDef="reportIssue">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Report Issue </th>
+  <td mat-cell *matCellDef="let element"> {{element.reportIssue}} </td>
+ </ng-container>
+ <ng-container matColumnDef="action">
+  <th mat-header-cell *matHeaderCellDef class="tHeader"> Action </th> 
+  <td mat-cell *matCellDef="let element" style="text-align: center;">
+   
+    <button mat-stroked-button matTooltip="Click to return stock" class="iconbutton1" (click)="returnStocks(element)">
+     Return
+    </button>
+   
+    <button mat-stroked-button matTooltip="Click to report issue" (click)="reportQualityIssue(element)" class="iconbutton2" >
+   Report
+  </button>
+
+  <button mat-stroked-button matTooltip="Click to cancel order" (click)="cancelOrder(element)" class="iconbutton3" >
+ Cancel
+  </button>
+ 
+  <button *ngIf="element.oPayment!='Done'" mat-stroked-button matTooltip="Make Payment" (click)="makePaymentDialog(element)" class="iconbutton4">
+ Payment
+  </button>
+  </td>
+ </ng-container>
+ <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+ <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[4,8,12]"
+ showFirstLastButtons
+ aria-label="Select page of periodic elements">
+</mat-paginator>
+</div>
+

@@ -1,0 +1,64 @@
+<mat-card class="example-card" class="form">
+    <div class="form" >
+        <mat-card-header>
+          <h1 class="addProduct"><b>Add Product</b></h1>
+          </mat-card-header>
+          <br>
+          
+          <mat-card-content>
+        <form class="example-form" [formGroup]="ProductForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill">
+            <mat-label>Product Id</mat-label>
+            <input matInput placeholder="enter the product Id" formControlName="id" >
+            <mat-icon matSuffix>featured_video</mat-icon>
+            </mat-form-field>  &nbsp;
+              <mat-form-field appearance="fill">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="enter the name of Product" formControlName="pName" >
+                <mat-icon matSuffix>donut_small</mat-icon>
+                </mat-form-field>
+                  <br>
+                  <br>
+                
+        <mat-form-field  appearance="fill">
+        <mat-label>Product Price</mat-label>
+        <input matInput placeholder="enter the price of product" formControlName="pPrice">
+        <mat-icon matSuffix> attach_money</mat-icon>
+        </mat-form-field>&nbsp;
+        <mat-form-field appearance="fill" >
+            <mat-label>Available product</mat-label>
+            <input type="number" matInput placeholder="Enter Available product" formControlName="pAvailabiltyCount">
+            <mat-icon matSuffix>check_circle</mat-icon>
+          </mat-form-field>
+            <br>
+                <br>
+            <mat-form-field appearance="fill" >
+              <mat-label>Enter Manufacturing Date</mat-label>
+              <input matInput [matDatepicker]="picker1" formControlName="pMfgDate">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker1">
+                <mat-icon matDatepickerToggleIcon>event</mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field> &nbsp;
+            <mat-form-field appearance="fill" >
+                <mat-label>Enter Expiry Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="pExpiryDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> &nbsp;
+              <br>
+           
+            <br>
+            <br>
+          <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button *ngIf="isEdit" style="margin-left: 8px;" mat-raised-button color="accent" [disabled]="ProductForm.invalid">Update</button>
+            <button *ngIf="!isEdit" style="margin-left: 8px;" mat-stroked-button color="primary" [disabled]="ProductForm.invalid">Save</button>
+          </div>
+        </form>
+        </mat-card-content>
+        </div>
+    </mat-card>
+

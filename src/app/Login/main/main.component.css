@@ -1,0 +1,106 @@
+.Bg-img {
+    display: block;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    transition: background-color 300ms;
+    margin-left: 312px;
+    object-fit: cover;
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: rgb(9, 19, 50);
+}
+
+
+.T0 {
+    position: relative;
+    text-align: left;
+    color: rgb(5, 39, 39);
+    margin-top: -500px;
+    margin-left: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 300%;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+
+.T1 {
+    position: relative;
+    text-align: left;
+    color: rgb(5, 39, 39);
+    margin-top: 0px;
+    margin-left: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+.logo{
+    border-radius: 50px;
+  }
+
+.signUp {
+    background-color: #017E84;
+    color: rgb(240, 248, 248);
+    border-radius: 30px;
+    margin-left: 40px;
+}
+
+.loginButton {
+    color: #f1f4f4;
+    background-color: #017E84;
+    height: 40px;
+   margin-left: 800px;
+    font-size: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* background-color: rgb(22, 95, 95);; */
+}
+
+.toolbar {
+    position: fixed;
+    height: 80px;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:grey;
+    color: white;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+

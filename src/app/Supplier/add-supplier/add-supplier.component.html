@@ -1,0 +1,65 @@
+<form [formGroup]="SupplierForm" (ngSubmit)="onSubmit()" class="form">
+
+    <br> <br>
+    <h1 class="fillSupplier"><b>Fill Supplier Form</b></h1>
+    <mat-card class="card">
+
+        <div>
+            <mat-form-field appearance="outline" >
+                <mat-label> Supplier Id </mat-label>
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <input  formControlName="id" matInput placeholder="Enter Supplier Id" >
+                <mat-error>*Supplier Id is required</mat-error>
+            </mat-form-field>
+        </div>
+
+       
+        <div>
+            <mat-form-field appearance="outline" disabled>
+                <mat-label> Supplier Name </mat-label>
+                <mat-icon matSuffix>person</mat-icon>
+                <input formControlName="name" matInput placeholder="Enter Supplier Name" required>
+                <mat-error>*Supplier Name is required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" >
+                <mat-label> Email Id </mat-label>
+                <mat-icon matSuffix>email</mat-icon>
+                <input  formControlName="email" matInput placeholder="Enter email Id" >
+                <mat-error>*Email Id is required</mat-error>
+            </mat-form-field>
+        </div>
+
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input formControlName="phoneNumber" matInput placeholder="Enter Phone No.">
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-error>*Phone Number is required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Supplier Address</mat-label>
+                <mat-icon matSuffix>location_on</mat-icon>
+                <input matInput #sAddress maxlength="60" formControlName="address" matInput
+                    placeholder="Enter Supplier Address" required>
+                <mat-hint [align]="'end'">{{sAddress.value.length}} / 60</mat-hint>
+                <mat-error>*Supplier Address is required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <br>
+        <div>
+            <button type="submit" mat-stroked-button class="submit-Btn">Submit</button>
+        </div>
+
+
+    </mat-card>
+    <br>
+
+</form>

@@ -1,0 +1,39 @@
+.example-container {
+    height: 350px;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -20px;
+    border: 1px solid #017e87;
+    padding: 10px;
+    box-shadow: 5px 12px #11393b;
+    background: #bddbde; 
+  }
+  .logo{
+    border-radius: 50px;
+}
+
+.user
+{
+  color:#1a686c;
+  margin-left:630px;
+  float:left;
+  
+}
+
+.toolbar {
+    height: 70px;
+    position: fixed;
+    top: 0px; 
+    z-index: 1000;   
+}
+
+.logoutButton {
+    color: #f1f4f4;
+    background-color: #1a686c ;
+    height: 40px;
+    font-size: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

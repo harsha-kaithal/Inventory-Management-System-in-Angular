@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+    <div class="form" >
+        <mat-card-header>
+            <mat-card-title class="return">Return Stock</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+        <form class="example-form" [formGroup]="orderDetailsform">
+          <mat-form-field appearance="fill">
+            <mat-label>Order Id</mat-label>
+            <input matInput placeholder="enter the order Id" formControlName="id" readonly >
+           
+            </mat-form-field>  &nbsp;
+              <mat-form-field appearance="fill">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="enter the name of Product" formControlName="productName" readonly>
+                
+                </mat-form-field >
+                  <br>
+                  <mat-form-field appearance="fill">
+                    <textarea matInput placeholder="Enter Issue" formControlName="reportIssue"></textarea>
+                  </mat-form-field>&nbsp;
+        
+                <br>
+            
+          <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button  style="margin-left: 8px;background-color:rgb(37, 99, 171);color: white;" mat-stroked-button (click)="returnStock()">Return</button>
+          
+          </div>
+        </form>
+        </mat-card-content>
+        </div>
+    </mat-card>

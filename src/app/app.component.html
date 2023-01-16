@@ -1,0 +1,121 @@
+<mat-sidenav-container fullscreen navbar-fixed-top>
+
+  <mat-sidenav #sidenav class="side-nav">
+
+    <mat-nav-list (click)="sidenav.close()">
+
+        <br />
+
+        <a mat-stroked-button class="dashboard" style="margin-left: 35px; background-color: #11393b; color: #d6edee; border-radius: 30px;" routerLink="/adminDashboard">
+
+          <mat-icon>apps</mat-icon>
+
+          <mat-label>Dashboard</mat-label>
+
+        </a>  
+
+ 
+
+        <br /><br />
+
+        <a mat-stroked-button class="menu" routerLink="/product">
+
+        <mat-icon style="float: left">shopping_cart</mat-icon> &nbsp;
+
+          <span>Products</span>
+
+        </a>
+
+ 
+
+        <br /><br />
+
+     
+
+        <a mat-stroked-button class="menu" routerLink="/orderDetails">
+
+          <mat-icon style="float: left">add_shopping_cart</mat-icon> &nbsp;
+
+          <span> Purchase  </span>
+
+        </a>
+
+
+
+       
+
+        <br /><br />
+
+     
+
+        <a mat-stroked-button class="menu" routerLink="/orderList">
+
+          <mat-icon style="float: left">add_shopping_cart</mat-icon> &nbsp;
+
+          <span> Orders List &nbsp;</span>
+
+        </a>
+
+   
+
+     
+
+        <br /><br />
+
+ 
+
+        <a mat-stroked-button class="menu" routerLink="/supplier">
+
+          <mat-icon style="float: left">dehaze</mat-icon> &nbsp;  
+
+          <span>Supplier</span>
+
+        </a>
+
+ 
+
+      </mat-nav-list>
+
+    </mat-sidenav>
+
+ 
+
+    <mat-toolbar color="primary" class="toolbar" *ngIf="authService.currentUser$ | async as user">
+
+
+
+     
+
+      <ng-container >
+
+        <button mat-button class="Menu" (click)="sidenav.open()">
+
+          <mat-icon>apps</mat-icon> Menu
+
+        </button>
+
+      </ng-container>
+
+
+
+
+      <ng-container *ngIf="authService.currentUser$ | async as user">
+
+        <button mat-button class="logout-btn" (click)="logout()">
+
+        <mat-icon>logout</mat-icon>Logout</button>
+
+      </ng-container>
+
+
+
+    </mat-toolbar>
+
+ 
+
+    <router-outlet></router-outlet>
+
+
+
+</mat-sidenav-container>
+

@@ -1,0 +1,32 @@
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(203, 225, 234);
+    
+}
+
+.form{
+   /* background-image: url('https://i.pinimg.com/originals/f0/3a/74/f03a74ca9abf2261b20af74c03d3770b.jpg'); */
+   background-image: url('https://t3.ftcdn.net/jpg/05/25/33/20/240_F_525332019_92hYjYOvh0bQN9U0t0C84BF0dAhjZXVN.jpg');
+
+}
+
+.fillSupplier{
+    color: #11393b; 
+    text-align: center; 
+    background-color: rgb(201, 229, 237);
+}
+
+.submit-Btn{
+    width: 130px;
+    background-color: #11393b;
+    color: aliceblue; 
+}

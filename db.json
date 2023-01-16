@@ -1,0 +1,396 @@
+{
+  "Supplier": [
+    {
+      "name": "mayank",
+      "email": "m@gmail.com",
+      "phoneNumber": "9144331591",
+      "address": "Ratlam",
+      "id": 101
+    },
+    {
+      "name": "harsha",
+      "email": "harsha@gmail.com",
+      "phoneNumber": "9144676791",
+      "address": "Indore",
+      "id": 102
+    },
+    {
+      "name": "Harshit",
+      "email": "harshit@gmail.com",
+      "phoneNumber": "9876543212",
+      "address": "Dhar",
+      "id": 103
+    },
+    {
+      "name": "Abhishek",
+      "email": "abhi@gmail.com",
+      "phoneNumber": "9993508406",
+      "address": "Ujjain",
+      "id": 104
+    },
+    {
+      "name": "kavita",
+      "email": "kavita@gmail.com",
+      "phoneNumber": "678945231",
+      "address": "Goa",
+      "id": 105
+    },
+    {
+      "name": "Aditya",
+      "email": "adi@gmail.com",
+      "phoneNumber": "7889568745",
+      "address": "Indore",
+      "id": 106
+    },
+    {
+      "name": "Aditya",
+      "email": "adi@gmail.com",
+      "phoneNumber": "6789452345",
+      "address": "Indore",
+      "id": 107
+    },
+    {
+      "name": "Nikita",
+      "email": "nikki@gmail.com",
+      "phoneNumber": "7834126578",
+      "address": "Rajgarh",
+      "id": 108
+    },
+    {
+      "name": "Nidhi",
+      "email": "nidhi@gmail.com",
+      "phoneNumber": "9521206684",
+      "address": "Indore",
+      "id": 109
+    }
+  ],
+  "Product": [
+    {
+      "id": "101",
+      "pName": "Ghee",
+      "pPrice": "899",
+      "pMfgDate": "2023-01-01T18:30:00.000Z",
+      "pExpiryDate": "2034-11-28T18:30:00.000Z",
+      "pAvailabiltyCount": 13
+    },
+    {
+      "id": "103",
+      "pName": "Juice",
+      "pPrice": "290",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2023-03-14T18:30:00.000Z",
+      "pAvailabiltyCount": 10
+    },
+    {
+      "id": "112",
+      "pName": "Mustard Oil",
+      "pPrice": "300",
+      "pMfgDate": "2022-11-01T18:30:00.000Z",
+      "pExpiryDate": "2023-11-12T18:30:00.000Z",
+      "pAvailabiltyCount": 90
+    },
+    {
+      "id": "111",
+      "pName": "Surf Excel",
+      "pPrice": "299",
+      "pMfgDate": "2022-01-02T18:30:00.000Z",
+      "pExpiryDate": "2024-06-09T18:30:00.000Z",
+      "pAvailabiltyCount": 87
+    },
+    {
+      "id": "121",
+      "pName": "Shampoo",
+      "pPrice": "250",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2029-10-15T18:30:00.000Z",
+      "pAvailabiltyCount": 50
+    },
+    {
+      "id": "132",
+      "pName": "Tea Leaves",
+      "pPrice": "450",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2024-10-14T18:30:00.000Z",
+      "pAvailabiltyCount": 188
+    },
+    {
+      "id": "123",
+      "pName": "Almonds",
+      "pPrice": "1200",
+      "pMfgDate": "2023-01-29T18:30:00.000Z",
+      "pExpiryDate": "2033-10-10T18:30:00.000Z",
+      "pAvailabiltyCount": 50
+    },
+    {
+      "id": "155",
+      "pName": "Cashew",
+      "pPrice": "250",
+      "pMfgDate": "2023-01-08T18:30:00.000Z",
+      "pExpiryDate": "2023-01-30T18:30:00.000Z",
+      "pAvailabiltyCount": 23
+    },
+    {
+      "id": "125",
+      "pName": "Walnuts",
+      "pPrice": "450",
+      "pMfgDate": "2023-01-22T18:30:00.000Z",
+      "pExpiryDate": "2024-10-07T18:30:00.000Z",
+      "pAvailabiltyCount": 45
+    },
+    {
+      "id": "201",
+      "pName": "Nivea Body Lotion",
+      "pPrice": "699",
+      "pMfgDate": "2022-12-31T18:30:00.000Z",
+      "pExpiryDate": "2029-10-15T18:30:00.000Z",
+      "pAvailabiltyCount": 78
+    }
+  ],
+  "OrderDetails": [
+    {
+      "id": 121,
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "12",
+      "oAmount": 3480,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Done",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Canceled",
+      "reportIssue": "",
+      "supplier": "mayank"
+    },
+    {
+      "id": 122,
+      "pId": "112",
+      "productName": "Mustard Oil",
+      "oNoOfProducts": "34",
+      "oAmount": 10200,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Pending",
+      "oDate": "2023-01-16T18:30:00.000Z",
+      "oStatus": "Returned",
+      "supplier": "harsha",
+      "reportIssue": "Expire"
+    },
+    {
+      "id": 123,
+      "pId": "111",
+      "productName": "Surf Excel",
+      "oNoOfProducts": "20",
+      "oAmount": 5980,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Processing",
+      "oDate": "2023-01-30T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": "",
+      "supplier": "mayank"
+    },
+    {
+      "id": 124,
+      "pId": "200",
+      "productName": "Vaseline Body Lotion",
+      "oNoOfProducts": "30",
+      "oAmount": 11970,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Done",
+      "oDate": "2023-01-29T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": "",
+      "supplier": "Nikita"
+    },
+    {
+      "id": 125,
+      "pId": "121",
+      "productName": "Shampoo",
+      "oNoOfProducts": "20",
+      "oAmount": 5000,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Done",
+      "oDate": "2023-01-22T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": null,
+      "supplier": "Aditya"
+    },
+    {
+      "id": 126,
+      "pId": "101",
+      "productName": "Ghee",
+      "oNoOfProducts": "20",
+      "oAmount": 17980,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-29T18:30:00.000Z",
+      "oStatus": "Canceled",
+      "reportIssue": null,
+      "supplier": "mayank"
+    },
+    {
+      "id": 127,
+      "pId": "103",
+      "productName": "Juice",
+      "oNoOfProducts": "50",
+      "oAmount": 14500,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-15T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "mayank"
+    },
+    {
+      "id": 128,
+      "pId": "112",
+      "productName": "Mustard Oil",
+      "oNoOfProducts": "70",
+      "oAmount": 21000,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Processing",
+      "oDate": "2023-01-16T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": null,
+      "supplier": "mayank"
+    },
+    {
+      "id": 129,
+      "pId": "112",
+      "productName": "Mustard Oil",
+      "oNoOfProducts": "50",
+      "oAmount": 15000,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Processing",
+      "oDate": "2023-01-15T18:30:00.000Z",
+      "oStatus": "Returned",
+      "reportIssue": "Expired Product",
+      "supplier": "mayank"
+    },
+    {
+      "id": 130,
+      "pId": "132",
+      "productName": "Tea Leaves",
+      "oNoOfProducts": "60",
+      "oAmount": 27000,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Processing",
+      "oDate": "2023-01-29T18:30:00.000Z",
+      "oStatus": "Returned",
+      "reportIssue": "Not Required",
+      "supplier": "mayank"
+    },
+    {
+      "id": 131,
+      "pId": "123",
+      "productName": "Almonds",
+      "oNoOfProducts": "67",
+      "oAmount": 80400,
+      "oPaymentType": "CashOnDeleviery",
+      "oPayment": "Pending",
+      "oDate": "2023-01-21T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "Expired Product"
+    },
+    {
+      "id": 132,
+      "pId": "201",
+      "productName": "Nivea Body Lotion",
+      "oNoOfProducts": "30",
+      "oAmount": 20970,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-29T18:30:00.000Z",
+      "oStatus": "Returned",
+      "reportIssue": "Expired"
+    },
+    {
+      "id": 133,
+      "pId": "155",
+      "productName": "Cashew",
+      "oNoOfProducts": "20",
+      "oAmount": 5000,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-29T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": null,
+      "supplier": "Nikita"
+    },
+    {
+      "id": 134,
+      "pId": "111",
+      "productName": "Surf Excel",
+      "oNoOfProducts": "70",
+      "oAmount": 20930,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Done",
+      "oDate": "2023-01-22T18:30:00.000Z",
+      "oStatus": "Canceled",
+      "reportIssue": null,
+      "supplier": "Nikita"
+    },
+    {
+      "id": 135,
+      "pId": "200",
+      "productName": "Vaseline Body Lotion",
+      "oNoOfProducts": "70",
+      "oAmount": 27930,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-16T18:30:00.000Z",
+      "oStatus": "Canceled",
+      "reportIssue": null,
+      "supplier": "mayank"
+    },
+    {
+      "id": 136,
+      "pId": "123",
+      "productName": "Almonds",
+      "oNoOfProducts": "67",
+      "oAmount": 80400,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-15T18:30:00.000Z",
+      "oStatus": "Delivered",
+      "reportIssue": null,
+      "supplier": "Nikita"
+    },
+    {
+      "id": 137,
+      "pId": "123",
+      "productName": "Almonds",
+      "oNoOfProducts": "3",
+      "oAmount": 3600,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Pending",
+      "oDate": "2023-01-17T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "Nidhi"
+    },
+    {
+      "id": 138,
+      "pId": "112",
+      "productName": "Mustard Oil",
+      "oNoOfProducts": "12",
+      "oAmount": 3600,
+      "oPaymentType": "Card-Based Payment",
+      "oPayment": "Done",
+      "oDate": "2023-01-16T18:30:00.000Z",
+      "oStatus": "Pending",
+      "supplier": "Nidhi",
+      "reportIssue": null
+    },
+    {
+      "id": 139,
+      "pId": "112",
+      "productName": "Mustard Oil",
+      "oNoOfProducts": "3",
+      "oAmount": 900,
+      "oPaymentType": "UPI PaymentMethods",
+      "oPayment": "Done",
+      "oDate": "2023-01-08T18:30:00.000Z",
+      "oStatus": "Pending",
+      "reportIssue": "",
+      "supplier": "mayank"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<div >
+  <div>
+    <h1 class="heading">
+      <b>Stock List</b>
+    <span>
+      <button mat-raised-button class="addProduct-Btn" (click)="openDialog()">Add Product</button>
+      </span>
+    </h1>
+  </div>
+  <br>
+  <section class="example-container mat-elevation-z8" tabindex="0">
+      <table mat-table [dataSource]="Product_LIST">
+    
+        <!-- Id Column -->
+        <ng-container matColumnDef="pId">
+          <th mat-header-cell *matHeaderCellDef class="header"> Product Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="pName">
+          <th mat-header-cell *matHeaderCellDef class="header"> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.pName}} </td>
+        </ng-container>
+    
+        <!-- Price Column -->
+        <ng-container matColumnDef="pPrice">
+          <th mat-header-cell *matHeaderCellDef class="header"> Price </th>
+          <td mat-cell *matCellDef="let element"> {{element.pPrice | currency: 'INR'}} </td>
+        </ng-container>
+    
+        <!-- Mfg Column -->
+        <ng-container matColumnDef="pMfgDate">
+          <th mat-header-cell *matHeaderCellDef class="header"> Mfg Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMfgDate | date}} </td>
+        </ng-container>
+
+
+        <!-- Expiry Date Column -->
+        <ng-container matColumnDef="pExpiryDate">
+          <th mat-header-cell *matHeaderCellDef class="header"> Expiry Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.pExpiryDate | date}} </td>
+        </ng-container>
+
+        <!-- Availability Column -->
+        <ng-container matColumnDef="pAvailabiltyCount">
+          <th mat-header-cell *matHeaderCellDef class="header"> Product Availability </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.pAvailabiltyCount}} </td>
+        </ng-container>
+        
+        
+        <ng-container matColumnDef="Edit">
+          <th mat-header-cell *matHeaderCellDef class="header"> Update Details </th>
+          <td mat-cell *matCellDef="let element" style="text-align: center;">
+            <button mat-raised-button class="edit-Btn" (click)="editProduct(element)">
+              &nbsp;&nbsp;<mat-icon>edit</mat-icon> Edit
+            </button>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="Delete">
+          <th mat-header-cell *matHeaderCellDef class="header"> Delete Item</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button class="delete-Btn" (click)="Delete(element.id)">
+              &nbsp;&nbsp;<mat-icon>delete</mat-icon>Delete
+            </button>
+          </td>
+        </ng-container>
+       
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </section>
+    
+</div>
